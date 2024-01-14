@@ -1,0 +1,20 @@
+{
+  "name": "mact6340contract",
+  "version": "1.0.0",
+  "description": "This is the Smart Contract for my NFT mint for MACT 6340 Course",
+  "main": "index.js",
+  "scripts": {
+    "test": "npx hardhat test",
+    "coverage": "npx hardhat coverage",
+    "deploy": "node ./scripts/deploy.js"
+  },
+  "keywords": [],
+  "author": "David G. Smith",
+  "license": "MIT",
+  "dependencies": {
+    "@nomicfoundation/hardhat-toolbox": "^4.0.0",
+    "@openzeppelin/contracts": "^5.0.1",
+    "dotenv": "^16.3.1",
+    "hardhat": "^2.19.4"
+  }
+}
