@@ -11,6 +11,7 @@ describe("DGSCreativeNFTContract", async function () {
       "https://ipfs.io/ipfs/bafkreidr5a7hvyiilxfug2yqpbkdowcahpbsw4jszstz6iur5ae5dx7b54",
     royaltyArtist: "0x94848CEe6eA7dBcc5322f0B13015A42ec63bC3BB",
     royaltyBasis: 500,
+    gasLimit: 30000000, // use a gas limit within the block gas limit
   };
   this.beforeEach(async function () {
     DGSCreativeNFTContractFactory = await ethers.getContractFactory(
@@ -54,6 +55,7 @@ describe("DGSCreativeNFTContract", async function () {
     it("should be named DGSCreativeNFTContract", async function () {
       const expectedValue = "DGSCreativeNFTContract";
       const currentValue = await DGSCreativeNFTContract.name();
+      console.log(currentValue.toString(), expectedValue);
       assert.equal(currentValue.toString(), expectedValue);
     });
     it("should be have symbol DGS", async function () {

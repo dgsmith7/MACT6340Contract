@@ -43,6 +43,7 @@ async function main() {
   if (
     // we are on a live testnet and have the correct api key
     (network.config.chainId === 80001 && process.env.POLYGONSCAN_API_KEY) ||
+    (network.config.chainId === 80002 && process.env.ETHERSCAN_API_KEY) ||
     (network.config.chainId === 1115511 && process.env.ETHERSCAN_API_KEY)
   ) {
     console.log("Verifying...");
